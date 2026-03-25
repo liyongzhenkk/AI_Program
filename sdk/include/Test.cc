@@ -43,6 +43,9 @@ int receive_data(int sock, char* data) {
 int close_socket(int sock) {
     return close(sock);
 }
+
+
+//冒泡排序
     //maopaopaixu  从小到大
     void bubble_sort(int arr[], int n) {
         for (int i = 0; i < n - 1; i++) {
@@ -55,6 +58,16 @@ int close_socket(int sock) {
             }
         }
     }
+
+//快速排序
+void quick_sort(int arr[], int left, int right) {
+    if (left < right) {
+        int pivot = partition(arr, left, right);
+        quick_sort(arr, left, pivot - 1);
+        quick_sort(arr, pivot + 1, right);
+    }
+}
+
 void test() {
     std::cout << "Hello, World!" << std::endl;
 }
